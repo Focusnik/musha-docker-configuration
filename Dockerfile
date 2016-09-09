@@ -43,10 +43,11 @@ RUN yum install -y \
 RUN yum install -y iproute
 
 ENV TERM dumb
-EXPOSE 80
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
 RUN npm install --global gulp
+
+EXPOSE 80
